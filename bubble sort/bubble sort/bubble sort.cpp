@@ -2,13 +2,12 @@
 //
 
 #include "stdafx.h"
-#include "string"
 #include <iostream>
-#include <stdio.h>
+
 #include <ctime>
 
 using namespace std;
-const int  tamanho = 4;
+const int  tamanho =100000;
 
 int bubble(int valor[], int i) {
   int aux = 0;
@@ -29,12 +28,13 @@ int bubble(int valor[], int i) {
 int main()
 {
   int vetor[tamanho] = { 0,1,3,4 };
+  clock_t t;
 
+  t = clock();
   bubble(vetor, tamanho);
+  t = clock() - t;
 
-  for (int i = 0; i < tamanho; i++) {
-    cout << vetor[i] << " ";
-  }
+  cout << " O tempo gasto foi de: " << ((float)t)/CLOCKS_PER_SEC;
 
   cout << endl;
   system("pause");

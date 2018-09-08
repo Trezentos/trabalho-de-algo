@@ -27,7 +27,7 @@ int bubble(int valor[], int i) {
 
 int main()
 {
-  int vetor[tamanho] = { 0,1,3,4 };
+  int vetor[tamanho] = { 0 };
   clock_t t;
 
   t = clock();

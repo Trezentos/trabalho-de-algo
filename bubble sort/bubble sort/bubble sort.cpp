@@ -22,9 +22,9 @@ int main()
   }
 
   t = clock();
-  for (int i = 0; i<tamanho; i++) {
-    for (int x = i + 1; x < tamanho; x++) {
-      if (vetor[i] < vetor[x]) {
+  for (int i = 0; i<tamanho; i++) { //aqui o 'i' acessa o indice antecessor para comparar com o sucessor
+    for (int x = i + 1; x < tamanho; x++) { // aqui acontece ao contrário de cima
+      if (vetor[i] < vetor[x]) {// aqui, se o segundo numero for maior que o primeiro, o 'i' troca de lugar com o 'x' indice
         aux = vetor[i];
         vetor[i] = vetor[x];
         vetor[x] = aux;

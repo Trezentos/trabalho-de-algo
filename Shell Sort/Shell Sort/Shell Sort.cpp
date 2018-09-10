@@ -6,6 +6,7 @@
 
 using namespace std;
 
+int trocas;
 //Neste programa nos utilizamos o Shell Sort.
 
 
@@ -26,13 +27,14 @@ void shellsort(int *vet, int tamanho) {//Basicamente ele trabalha com o método 
         j -= gap;
       }
       vet[j + gap] = value;
+      trocas++;
     }
   }
 }
 using namespace std;
 int main()
 {
-  int const tamanho = 100000;
+  int const tamanho = 1000000;
   int vetor[tamanho] = { 0 }, contador;
   time_t t;
   
@@ -48,7 +50,7 @@ int main()
   t = clock() - t;
 
   cout << "Tempo gasto em um vetor com " << tamanho << " elementos: " << ((float)t) / CLOCKS_PER_SEC << " segundos.";
-  cout << "\n \n";
+  cout <<"e o numero de trocas foram de " << trocas << "\n \n";
   system("pause");
   return 0;
 

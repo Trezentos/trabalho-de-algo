@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
   const int tamanho=100000;
-  int notas[tamanho] = { 0 }, aux, contador = 0;
+  int notas[tamanho] = { 0 }, aux, contador = 0, trocas=0;
   time_t t;
   
   
@@ -29,7 +29,7 @@ int main() {
         aux = notas[j];
         notas[j] = notas[j - 1];
         notas[j - 1] = aux;
-
+        trocas++;
       }
     }
   }
@@ -38,6 +38,7 @@ int main() {
   
 
   cout << endl << "O tempo das trocas foram de " << ((float)t) / CLOCKS_PER_SEC << endl;
+  cout << "O numero de trocas foram de: " << trocas << endl;
 
   system("pause");
     return 0;

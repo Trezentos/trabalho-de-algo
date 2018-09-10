@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 { 
-  const int tamanho = 10000;
+  const int tamanho = 100000;
   int vetor[tamanho] = { tamanho }, i, j, min, x, contador=0, trocas = 0;
   time_t t;
 

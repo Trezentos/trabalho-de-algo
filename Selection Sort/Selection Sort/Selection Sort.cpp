@@ -10,8 +10,8 @@ using namespace std;
 
 int main()
 { 
-  const int tamanho = 1000;
-  int vetor[tamanho] = { tamanho }, i, j, min, x, contador=0;
+  const int tamanho = 10000;
+  int vetor[tamanho] = { tamanho }, i, j, min, x, contador=0, trocas = 0;
   time_t t;
 
   setlocale(LC_ALL, "portuguese");
@@ -32,11 +32,12 @@ int main()
     x = vetor[min];
     vetor[min] = vetor[i];
     vetor[i] = x;
+    trocas++;
   }
   t = clock() - t;
  
   cout << "O tempo em segundos em um vetor de tamanho " << tamanho << " é de  ";
-  cout << ((float)t) / CLOCKS_PER_SEC << " segundos. \n";
+  cout << ((float)t) / CLOCKS_PER_SEC << " segundos. \n E o numero de trocas foram de "<< trocas<<" trocas \n";
   
 
     system("pause");
